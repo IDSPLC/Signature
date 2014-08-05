@@ -45,11 +45,11 @@ CheckReg = true
 
 '* this helps to finds where the script is going wrong - uncomment to use
 ToDebug=False
-ToDebug=True
+'ToDebug=True
 'ToOverride=True
 'Overridecountry="BR"
 'OverrideNumbers = True
-CheckReg = false
+'CheckReg = false
 
 '* Location in the Registry of the Tagline - ADVANCED!
 strRegistryLocation = "HKCU\Software\IDSPLC\Sig\Ver"
