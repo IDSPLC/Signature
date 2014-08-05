@@ -1,5 +1,3 @@
-
-
 'On Error resume next
 
 Dim Ver
