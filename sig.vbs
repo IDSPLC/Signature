@@ -498,6 +498,8 @@ Function SetSig()
 			end if
 			
 			'**************************************************************************************************************************************
+			'This section controls the telephone output
+			'**************************************************************************************************************************************
 			
 			objSelection.TypeText Chr(11)
 			objSelection.Font.Color = intIconColour
@@ -536,6 +538,7 @@ Function SetSig()
 			'		strPhone = ArrDefaultPhone(4,2)
 			'	end if
 			'end if
+						
 			if strCountry = strCountryCodeUnitedStates then
 				if strDept = "Tech Services" OR strDept = "Field Services" then 
 					strPhone = strCustomPhoneUSTechSupport
@@ -548,8 +551,24 @@ Function SetSig()
 			
 			objSelection.TypeText strPhone
 			
-			if strExten <> "" then objSelection.TypeText strExtOpeningText & strExten & strExtClosingText
+			if strExten <> "" then 
+				if strCountry = strCountryCodeUnitedStates then
+					if strDept <> "Tech Services" AND strDept <> "Field Services" then
+						objSelection.TypeText strExtOpeningText & strExten & strExtClosingText
+					end if
+				end if
+			end if
+			
 			objSelection.TypeText strCoNameSeperatorWording
+			
+			'***************************This section outputs the mobile number**************************************
+			
+			'this section sets the mobile number to blank if user is part of US Tech or Field Services
+			if strCountry = strCountryCodeUnitedStates then
+					if strDept = "Tech Services" OR strDept = "Field Services" then 
+						strMobile = ""
+					end if
+			end if
 			
 			if strMobile <> "" then
 				objSelection.Font.Color = intIconColour
@@ -557,15 +576,10 @@ Function SetSig()
 				objSelection.TypeText strIconPhoneSourceChar
 				objSelection.Font.ColorIndex = intPhoneWordingColour
 				objSelection.Font.Name = strPhoneWordingFont
-				
-				if strCountry = strCountryCodeUnitedStates then
-					if strDept = "Tech Services" OR strDept = "Field Services" then 
-						strMobile = ""
-					end if
-				end if
 				objSelection.TypeText strMobile & strCoNameSeperatorWording
 			end if
 			
+			'*************************This section outputs the fax number**********************************************
 			
 			objSelection.Font.Color = intIconColour
 			objSelection.Font.Name = strIconFaxFont
