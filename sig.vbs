@@ -551,11 +551,13 @@ Function SetSig()
 			
 			objSelection.TypeText strPhone
 			
+			'This section outputs the phone extension			
 			if strExten <> "" then 
 				if strCountry = strCountryCodeUnitedStates then
 					if strDept <> "Tech Services" AND strDept <> "Field Services" then
 						objSelection.TypeText strExtOpeningText & strExten & strExtClosingText
 					end if
+				else objSelection.TypeText strExtOpeningText & strExten & strExtClosingText
 				end if
 			end if
 			
