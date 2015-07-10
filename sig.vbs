@@ -22,11 +22,11 @@ dim arrTagLink(3,2)
 
 '********* USER OPTIONS ***************************************************************************************************
 '* Increment this tag if you need to update the Signature to a new version
-Ver=18
+Ver=22
 
 '*****************************************************************************
 '* Set this to true if you want to print Marketing Taglines
-TagLine=False
+TagLine=True
 
 '* Use this Array to specify which Country gets the Tagline - Country Only!
 ArrayCountry= array( "BE","DE","FR","UK","US","BR")
@@ -46,6 +46,9 @@ CheckReg = true
 '* this helps to finds where the script is going wrong - uncomment to use
 ToDebug=False
 'ToDebug=True
+'bolOverrideVersion=TRUE
+'bolOverrideUsername=TRUE
+'strOverrideUsername="CN=Paul Young,OU=Users,OU=Group Finance,OU=IDS Boldon,OU=IDS,DC=idsltd,DC=com"
 'ToOverride=True
 'Overridecountry="BR"
 'OverrideNumbers = True
@@ -103,7 +106,7 @@ ArrDefaultFax(1,2) = "+49 69 3085 5125"
 
 '* France Pouilly **
 ArrDefaultFax(2,0) = strCountryCodeFrance
-ArrDefaultFax(2,1) = "21 230"
+ArrDefaultFax(2,1) = "21 320"
 ArrDefaultFax(2,2) = "+33(0)33.80.90.73.07"
 
 '* France Paris **
@@ -140,7 +143,7 @@ ArrDefaultPhone(1,2) = "+49 69 3085 5025"
 
 '* France Pouilly **
 ArrDefaultPhone(2,0) = strCountryCodeFrance
-ArrDefaultPhone(2,1) = "21 230"
+ArrDefaultPhone(2,1) = "21 320"
 ArrDefaultPhone(2,2) = "+33(0)33.80.90.52.52"
 
 '* France Paris **
@@ -183,34 +186,41 @@ intNameTitleWordingColour = 15
 intTitleWordingSize = 7
 strDualTitleSeperator = " / "
 
-bolCoNameWordingBold = False
-intCoNamePartOneWordingColour = 192
+bolIDSNameWordingBold = TRUE
+bolCoNameWordingBold = FALSE
+intCoNamePartZeroWordingColour = intNameTitleWordingColour
+strCoNamePartZeroWording = "IDS "
+intCoNamePartOneWordingColour = RGB(225,14,73)
 strCoNamePartOneWording = "Immuno"
 intCoNamePartTwoWordingColour = intNameTitleWordingColour
 strCoNamePartTwoWording = "diagnostic Systems"
+intCoNamePartThreeWordingColour = intNameTitleWordingColour
+strCoNamePartThreeWording = " Deutschland GmbH"
 strCoNameSeperatorWording = " | "
 
 intIconColour = intCoNamePartOneWordingColour
 
-strIconPhoneFont = "Wingdings"
-strIconPhoneSourceChar = "( "
+bolIconBold = TRUE
+strIconPhoneFont = "Arial"
+strIconPhoneSourceChar = "T: "
+strIconMobileSourceChar = " M: "
 strPhoneWordingFont = strNameTitleWordingFont
 intPhoneWordingColour = intCoNamePartTwoWordingColour
 
 strExtOpeningText = " (x"
 strExtClosingText = ") "
 
-strIconFaxFont = "Wingdings 2"
-strIconFaxSourceChar = "7 "
+strIconFaxFont = "Arial"
+strIconFaxSourceChar = " F: "
 
-strIconWebFont = "Webdings"
-strIconWebSourceChar = "ü "
+strIconWebFont = "Arial"
+strIconWebSourceChar = " W: "
 strSigWebAddress = "www.idsplc.com"
 
 intRegWordingSize = intTitleWordingSize
 intRegWordingColour = intNameTitleWordingColour
 
-strGermanyRegWordingLine1 = "Geschäftsführer | Managing Directors: Dr. Rudolf Schemer, Patrik Dahlen, Christopher Yates"
+strGermanyRegWordingLine1 = "Geschäftsführer | Managing Directors: Dr. Rudolf Schemer, Christopher Yates"
 strGermanyRegWordingLine2 = "Sitz der Gesellschaft | Domicile: Frankfurt am Main"
 strGermanyRegWordingLine3 = "Registergericht | Court of Registry: Amtsgericht Frankfurt am Main"
 strGermanyRegWordingLine4 = "HRB-Nr. | Commercial Register No: 74484"
@@ -220,7 +230,7 @@ strGermanyRegWordingLine4 = "HRB-Nr. | Commercial Register No: 74484"
 intEnviroWordingSize = intTitleWordingSize
 intEnviroWordingColour = 10   'Green
 strEnvironFont = "Webdings"
-strEnvironWebSourceChar = "P "
+strEnvironWebSourceChar = ""
 
 arrEnvironText(0,0) = "fr_fr"
 arrEnvironText(0,1) = "Avant d'imprimer cet email, pensez à l'environnement"
@@ -260,16 +270,16 @@ intTagLineTitleSize = 10
 strTagLineTitle = "Expanding Automated Immunoassay Solutions"
 intTagLineSize = 9
 intTagLineColour = intNameTitleWordingColour
-bolTagLineBold = False
+bolTagLineBold = True
 
 arrTagLine1(0,0) = strCountryCodeUnitedKingdom
-arrTagLine1(0,1) = "Visit us at 2014 AACC Annual Meeting Clinical Lab Expo at Booth #1445 (27th - 31st July 2014, IL, Chicago) to receive a personal IDS-iSYS system demonstration and learn more about our expanded specialty immunoassay menu."
+arrTagLine1(0,1) = "Join us at the AACC 2015 (stand #1425) 28th – 30th July, Atlanta, USA"
 arrTagLine1(1,0) = strCountryCodeFrance
-arrTagLine1(1,1) = "Visitez-nous à 2014 AACC réunion annuelle Clinical Lab Expo sur le stand # 1445 (27e - 31st Juillet 2014, IL, Chicago) pour recevoir un système de démonstration IDS-iSYS personnel et en savoir plus sur notre menu de dosage immunologique de spécialité élargi"
+arrTagLine1(1,1) = "Join us at the AACC 2015 (stand #1425) 28th – 30th July, Atlanta, USA"
 arrTagLine1(2,0) = strCountryCodeGermany
-arrTagLine1(2,1) = "Visit us at 2014 AACC Annual Meeting Clinical Lab Expo at Booth #1445 (27th - 31st July 2014, IL, Chicago) to receive a personal IDS-iSYS system demonstration and learn more about our expanded specialty immunoassay menu."
+arrTagLine1(2,1) = "Join us at the AACC 2015 (stand #1425) 28th – 30th July, Atlanta, USA"
 arrTagLine1(3,0) = strCountryCodeBelgium
-arrTagLine1(3,1) = "Visitez-nous à 2014 AACC réunion annuelle Clinical Lab Expo sur le stand # 1445 (27e - 31st Juillet 2014, IL, Chicago) pour recevoir un système de démonstration IDS-iSYS personnel et en savoir plus sur notre menu de dosage immunologique de spécialité élargi"
+arrTagLine1(3,1) = "Join us at the AACC 2015 (stand #1425) 28th – 30th July, Atlanta, USA"
 
 arrTagLinkLine(0,0) = strCountryCodeUnitedKingdom
 arrTagLinkLine(0,1) = "Click here for more IDS AACC information"
@@ -280,7 +290,7 @@ arrTagLinkLine(2,1) = "Click here for more IDS AACC information"
 arrTagLinkLine(3,0) = strCountryCodeBelgium
 arrTagLinkLine(3,1) = "Cliquez ici pour plus d'informations IDS AACC"
 
-strTagLink = "http://www.idsplc.com/en-us/news/article.php?id=3130"
+strTagLink = "http://www.idsplc.com/join-ids-at-the-aacc-2015-annual-meeting-georgia-world-congress-center-atlanta-usa/"
 arrTagLink(0,0) = strCountryCodeUnitedKingdom
 arrTagLink(0,1) = strTagLink
 arrTagLink(1,0) = strCountryCodeFrance
@@ -308,7 +318,13 @@ Else
 
 		SetSig()
 	Else
-		if ToDebug then wscript.echo "Program Complete, Version: " & Ver & " Matches InstalledVer: " & InstalledVer
+		if ToDebug then 
+			wscript.echo "Program Complete, Version: " & Ver & " Matches InstalledVer: " & InstalledVer
+			if bolOverrideVersion then
+				wscript.echo "Overriding Version Check: " & Ver
+				SetSig()
+			end if
+		end if
 	End If
 End If
 
@@ -354,6 +370,9 @@ Function SetSig()
 		Set WshShell = CreateObject("WScript.Shell")
 	
 		strUser = objSysInfo.UserName
+		if bolOverrideUsername then
+			strUser = strOverrideUsername
+		end if
 		Set objUser = GetObject("LDAP://" & strUser)
 
 		if ToDebug then wscript.echo "DEBUG: Setting Signature for " & strUser
@@ -461,11 +480,22 @@ Function SetSig()
 			objSelection.TypeText StrName & Chr(11)
 			objSelection.Font.Size = intTitleWordingSize
 			objSelection.TypeText strTitle & Chr(11)
-			objSelection.Font.bold = bolCoNameWordingBold
+			objSelection.TypeText Chr(11)
+			objSelection.Font.bold = bolIDSNameWordingBold
+			if strCountry = "DE" then 
+				objSelection.Font.ColorIndex = intCoNamePartZeroWordingColour
+				objSelection.TypeText strCoNamePartZeroWording
+			end if
 			objSelection.Font.Color = intCoNamePartOneWordingColour
 			objSelection.TypeText strCoNamePartOneWording
 			objSelection.Font.ColorIndex = intCoNamePartTwoWordingColour
-			objSelection.TypeText strCoNamePartTwoWording & strCoNameSeperatorWording
+			objSelection.TypeText strCoNamePartTwoWording 
+			if strCountry = "DE" then 
+				objSelection.Font.ColorIndex = intCoNamePartThreeWordingColour
+				objSelection.TypeText strCoNamePartThreeWording
+			end if
+			objSelection.Font.bold = bolCoNameWordingBold
+			objSelection.TypeText strCoNameSeperatorWording
 			
 			'***********************************************************************************************************************************
 			'** This Section Controls the format of the address, in some countries the postcode proceeds the town, others the reverse is true **
@@ -502,9 +532,12 @@ Function SetSig()
 			'**************************************************************************************************************************************
 			
 			objSelection.TypeText Chr(11)
+			
+			objSelection.Font.bold = bolIconBold
 			objSelection.Font.Color = intIconColour
 			objSelection.Font.Name = strIconPhoneFont
 			objSelection.TypeText strIconPhoneSourceChar
+			objSelection.Font.bold = false
 			objSelection.Font.ColorIndex = intPhoneWordingColour
 			objSelection.Font.Name = strPhoneWordingFont
 			if ToDebug then wscript.echo "DEBUG: Phone value is " & strPhone
@@ -573,9 +606,11 @@ Function SetSig()
 			end if
 			
 			if strMobile <> "" then
+				objSelection.Font.bold = bolIconBold
 				objSelection.Font.Color = intIconColour
 				objSelection.Font.Name = strIconPhoneFont
-				objSelection.TypeText strIconPhoneSourceChar
+				objSelection.TypeText strIconMobileSourceChar
+				objSelection.Font.bold = false
 				objSelection.Font.ColorIndex = intPhoneWordingColour
 				objSelection.Font.Name = strPhoneWordingFont
 				objSelection.TypeText strMobile & strCoNameSeperatorWording
@@ -583,9 +618,11 @@ Function SetSig()
 			
 			'*************************This section outputs the fax number**********************************************
 			
+			objSelection.Font.bold = bolIconBold
 			objSelection.Font.Color = intIconColour
 			objSelection.Font.Name = strIconFaxFont
 			objSelection.TypeText strIconFaxSourceChar
+			objSelection.Font.bold = false
 			objSelection.Font.ColorIndex = intPhoneWordingColour
 			objSelection.Font.Name = strPhoneWordingFont
 			
@@ -601,9 +638,11 @@ Function SetSig()
 			
 			objSelection.TypeText strFax & strCoNameSeperatorWording
 			
+			objSelection.Font.bold = bolIconBold
 			objSelection.Font.Color = intIconColour
 			objSelection.Font.Name = strIconWebFont
 			objSelection.TypeText strIconWebSourceChar
+			objSelection.Font.bold = false
 			objSelection.Font.ColorIndex = intPhoneWordingColour
 			objSelection.Font.Name = strNameTitleWordingFont
 			objSelection.TypeText strSigWebAddress
@@ -672,6 +711,7 @@ Function SetSig()
 			objSelection.Font.Size = intEnviroWordingSize
 			objSelection.Font.ColorIndex = intEnviroWordingColour
 			objSelection.Font.Name = strEnvironFont
+			objSelection.TypeText Chr(11)
 			objSelection.TypeText strEnvironWebSourceChar
 			objSelection.Font.Name = strNameTitleWordingFont
 			
@@ -751,13 +791,13 @@ Function SetSig()
 	
 Sub MarketingTagLine(objSelection,objDoc,strCountry)
     
-	'* this is the code to run the tagline that is allowed earlier on 
+	'************************** this is the code to run the tagline that is allowed earlier on ***********************
 	objSelection.Font.bold = bolTagLineTitleBold
 	objSelection.TypeText Chr(11) & Chr(11)
 	objSelection.Font.Name = strTagLineFont
-	objSelection.Font.Size = intTagLineTitleSize
-	objSelection.Font.ColorIndex = intTagLineTitleColour
-	objSelection.TypeText strTagLineTitle
+	'objSelection.Font.Size = intTagLineTitleSize
+	'objSelection.Font.ColorIndex = intTagLineTitleColour
+	'objSelection.TypeText strTagLineTitle
 	objSelection.Font.Size = intTagLineSize
 	objSelection.Font.ColorIndex = intTagLineColour
 	objSelection.TypeText Chr(11)
