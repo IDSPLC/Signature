@@ -22,7 +22,7 @@ dim arrTagLink(3,2)
 
 '********* USER OPTIONS ***************************************************************************************************
 '* Increment this tag if you need to update the Signature to a new version
-Ver=22
+Ver=23
 
 '*****************************************************************************
 '* Set this to true if you want to print Marketing Taglines
@@ -284,11 +284,11 @@ arrTagLine1(3,1) = "Join us at the AACC 2015 (stand #1425) 28th – 30th July, Atl
 arrTagLinkLine(0,0) = strCountryCodeUnitedKingdom
 arrTagLinkLine(0,1) = "Click here for more IDS AACC information"
 arrTagLinkLine(1,0) = strCountryCodeFrance
-arrTagLinkLine(1,1) = "Cliquez ici pour plus d'informations IDS AACC"
+arrTagLinkLine(1,1) = "Click here for more IDS AACC information"
 arrTagLinkLine(2,0) = strCountryCodeGermany
 arrTagLinkLine(2,1) = "Click here for more IDS AACC information"
 arrTagLinkLine(3,0) = strCountryCodeBelgium
-arrTagLinkLine(3,1) = "Cliquez ici pour plus d'informations IDS AACC"
+arrTagLinkLine(3,1) = "Click here for more IDS AACC information"
 
 strTagLink = "http://www.idsplc.com/join-ids-at-the-aacc-2015-annual-meeting-georgia-world-congress-center-atlanta-usa/"
 arrTagLink(0,0) = strCountryCodeUnitedKingdom
